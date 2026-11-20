@@ -15,7 +15,7 @@ if(new URLSearchParams(location.search).get('emailjs_test')!=='1'){
 status.textContent='Skickar testresultat via EmailJS...';
 try{
 const response=await fetch('https://api.emailjs.com/api/v1.0/email/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
- service_id:'service_z0358fc',template_id:'template_56fm5xp',user_id:'QlugiCyM0ykYsC71s',
+ service_id:'service_z0358fc',template_id:'template_56fm5xp',user_id:'QlugjCyM0ykYsC71s',
  template_params:{resultat:String(score),behover_ovas:misses.length?misses.join(' | '):'Alla rätt',time:new Date().toLocaleString('sv-SE',{timeZone:'Europe/Stockholm'})}
 })});
 const msg=await response.text();if(!response.ok)throw Error(msg||'HTTP '+response.status);
